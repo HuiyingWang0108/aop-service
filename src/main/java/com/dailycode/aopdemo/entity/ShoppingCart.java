@@ -9,9 +9,10 @@ import lombok.extern.slf4j.Slf4j;
 public class ShoppingCart {
     
 
-    public void checkout() {
+    public void checkout(String statues) {
 
-        log.info("checkout method from ShoppingCart class");
+        log.info("checkout method from ShoppingCart class"
+             + statues);
     }
 
 }

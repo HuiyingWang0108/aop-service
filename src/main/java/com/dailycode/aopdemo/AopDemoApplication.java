@@ -25,7 +25,7 @@ public class AopDemoApplication {
             ApplicationContext context 
 				= new AnnotationConfigApplicationContext(ApplicationConfiguration.class);
 			ShoppingCart cart = context.getBean(ShoppingCart.class);
-			cart.checkout();
+			cart.checkout("Error");
 
         };
     }

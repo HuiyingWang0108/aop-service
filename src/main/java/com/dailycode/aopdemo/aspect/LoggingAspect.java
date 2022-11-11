@@ -12,13 +12,13 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class LoggingAspect {
 
-    @Before("execution(* com.dailycode.aopdemo.entity.ShoppingCart.checkout())")
+    @Before("execution(* com.dailycode.aopdemo.entity.ShoppingCart.checkout(..))")
     public void beforeLogger() {
         log.info("Before loggers");
     }
 
     // @After("execution(* *.*.checkout())")// start any return type, any pakage, any class, chekout() function
-    @After("execution(* com.dailycode.aopdemo.entity.*.checkout())")// start any return type, any pakage, any class, chekout() function
+    @After("execution(* com.dailycode.aopdemo.entity.*.checkout(..))")// start any return type, any pakage, any class, chekout() function
     public void afterLogger() {
         log.info("After loggers");
     }
